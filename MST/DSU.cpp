@@ -67,3 +67,12 @@ int main()
     cout<<dsu_find(7);
     return 0;
 }
+
+/* input
+7 4
+1 2
+2 3
+4 5
+6 5
+
+*/
