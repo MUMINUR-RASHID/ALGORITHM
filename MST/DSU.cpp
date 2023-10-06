@@ -62,7 +62,21 @@ int main()
     {
         int u,v;
         cin>>u>>v;
-        dsu_union(u,v);
+        int leaderA = dsu_find(u);
+        int leaderB = dsu_find(v);
+       
+       
+       ///cycle detection
+       
+        if (leaderA == leaderB)
+        {
+            cout << "Cycel detected in between: " << u << " " << v << endl;
+        }
+        else
+        {
+            dsu_union(u,v);
+        }
+        
     }
     cout<<dsu_find(7);
     return 0;
